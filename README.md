@@ -7,7 +7,7 @@ Update: Inexplicably, it actually works quite well. The feedforward module follo
 ## Install
 
 ```bash
-$ pip install token-shift-gpt
+$ pip install git+https://github.com/fwcwmc/token-shift-gpt.git
 ```
 
 ## Usage

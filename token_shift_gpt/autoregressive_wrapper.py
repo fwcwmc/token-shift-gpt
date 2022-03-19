@@ -1,5 +1,6 @@
 import torch
 from torch import nn
+from tqdm import tqdm
 from entmax import entmax_bisect
 import torch.nn.functional as F
 
@@ -70,7 +71,7 @@ class AutoregressiveWrapper(nn.Module):
 
         out = start_tokens
 
-        for _ in range(seq_len):
+        for _ in tqdm(range(seq_len)):
             x = out[:, -self.max_seq_len:]
 
             logits = self.net(x, **kwargs)[:, -1, :]
